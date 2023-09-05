@@ -12,7 +12,7 @@ load_dotenv(dotenv_path)
 
 DEBUG = False
 
-ALLOWED_HOSTS = [".railway.app", "127.0.0.1"]
+ALLOWED_HOSTS = [".vercel.app", "127.0.0.1","*"]
 
 
 MIDDLEWARE = [
