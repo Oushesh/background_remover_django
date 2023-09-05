@@ -4,6 +4,7 @@ from uuid import uuid4
 from django.db import models
 from django.urls import reverse
 
+
 def get_upload_path(instance, filename):
     """Return timestamp filename for user uploaded files."""
 
@@ -12,6 +13,7 @@ def get_upload_path(instance, filename):
     folder = datetime.today().strftime("%Y/%m")
     image_path = f"{folder}/{time_stamp}.{ext}"
     return image_path
+
 
 class UserActivity(models.Model):
     """
@@ -29,7 +31,7 @@ class UserActivity(models.Model):
         verbose_name = "User Activity"
         verbose_name_plural = "User Activities"
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.slug)
 
     def get_absolute_url(self):
