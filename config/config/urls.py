@@ -1,4 +1,4 @@
-"""bgremove URL Configuration
+"""config URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -16,11 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import ResultView, UplodadView
-app_name = "bgremove"
-
 urlpatterns = [
-    path("",UplodadView.as_view(),name="home"),
-    path("result/<slug:slug>/",ResultView.as_view(),name="result"),
-    path("admin/", admin.site.urls),
+    path('admin/', admin.site.urls),
 ]
