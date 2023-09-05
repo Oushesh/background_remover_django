@@ -2,7 +2,11 @@
   "builds": [
     {
       "src": "bgremove/wsgi.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "500mb",
+        "runtime": "python3.9"
+      }
     }
   ],
   "routes": [
