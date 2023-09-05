@@ -1,14 +1,15 @@
 {
     "builds": [
       {
-        "src": "bgremove/wsgi.py",
-        "use": "@vercel/python"
+        "src": "config/wsgi.py",
+        "use": "@vercel/python",
+        "config": {"maxLambdaSize": "500mb","runtime": "python3.9"}
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "bgremove/wsgi.py"
+        "dest": "config/wsgi.py"
       }
     ]
   }
