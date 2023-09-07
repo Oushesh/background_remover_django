@@ -3,5 +3,5 @@
     Deployed on vercel and digital ocean.
 
 ## Backend:
-   Django: 
+   Django Ninja
    
