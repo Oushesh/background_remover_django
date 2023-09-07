@@ -8,5 +8,5 @@ dropbox
 gunicorn
 psycopg2-binary
 whitenoise
-urllib
+#urllib
 django_on_heroku
