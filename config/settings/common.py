@@ -28,7 +28,8 @@ load_dotenv(dotenv_path)
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+#SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+SECRET_KEY="!g8)ni!f3d_hx#*iaq0%%(bw5rd*43wz(2qq*ale6xzd$kab1!"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
