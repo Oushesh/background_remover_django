@@ -38,17 +38,12 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_FILE_STORAGE = "storages.backends.dropbox.DropBoxStorage"
 
-#DROPBOX_OAUTH2_TOKEN = os.getenv("DROPBOX_OAUTH2_TOKEN")
-DROPBOX_OAUTH2_TOKEN = "sl.BlpxLvFMFhJ-NjZ0ejffFyHyJyognaTU9tqSCAqTknTtVXbbGu1IQCRbzq98TW2ejiPW2STGwHqIjD4ibnE8sf-z9dCDyprjfIVQqxeQtraunPOU3w-nA3Bwly04McPQedbnsxp1MVrl03-yQRYn2kk"
+DROPBOX_OAUTH2_TOKEN = os.getenv("DROPBOX_OAUTH2_TOKEN")
+#DROPBOX_OAUTH2_TOKEN = "sl.BlpxLvFMFhJ-NjZ0ejffFyHyJyognaTU9tqSCAqTknTtVXbbGu1IQCRbzq98TW2ejiPW2STGwHqIjD4ibnE8sf-z9dCDyprjfIVQqxeQtraunPOU3w-nA3Bwly04McPQedbnsxp1MVrl03-yQRYn2kk"
 
-#DROPBOX_APP_KEY = os.getenv("DROPBOX_APP_KEY")
-#DROPBOX_APP_KEY = "qckrh0b36gaarzm"
-
-#DROPBOX_APP_SECRET = os.getenv("DROPBOX_APP_SECRET")
-#DROPBOX_APP_SECRET =
-
-#DROPBOX_OAUTH2_REFRESH_TOKEN = os.getenv("DROPBOX_OAUTH2_REFRESH_TOKEN")
-#DROPBOX_OAUTH2_TOKEN =
+DROPBOX_APP_KEY = os.getenv("DROPBOX_APP_KEY")
+DROPBOX_APP_SECRET = os.getenv("DROPBOX_APP_SECRET")
+DROPBOX_OAUTH2_REFRESH_TOKEN = os.getenv("DROPBOX_OAUTH2_REFRESH_TOKEN")
 
 # Update database configuration from $DATABASE_URL.
 import dj_database_url
