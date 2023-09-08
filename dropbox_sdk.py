@@ -26,6 +26,6 @@ if __name__ == "__main__":
 
     # Local image path and the path where you want to save the image in Dropbox
     IMAGE_PATH = "media/2023/09/20230905_122716.jpeg"
-    DESTINATION_PATH = "/path_in_dropbox.jpg"
+    DESTINATION_PATH = "https://www.dropbox.com/scl/fo/jf97szegrp01chpg6lsk8/h?rlkey=waoojc609zf7nq4ifji7g4u1e&dl=0"
 
     upload_to_dropbox(IMAGE_PATH, DESTINATION_PATH, ACCESS_TOKEN)
