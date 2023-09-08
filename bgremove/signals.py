@@ -41,15 +41,20 @@ def process_image(sender, instance, *args, **kwargs):
         image_file = Image.open(BytesIO(response.content))
         response = None
     else:
-        # get image from disk when in local
-        image_file = Image.open(instance.image.path)
+    """
+    # get image from disk when in local
+    image_link = "https://www.facebook.com/BeautifulBusinMauritius/photos/a.324200598457987/870665687144806/?__cft__[0]=AZU9u8DcmfeRnLUTFRy3O0qc4lLwB0KFH2D88lRFZU_RAXsh5JFkO3ufNcE-M2qjSsYUH_CDgnORClCJm0ao0v8Fj5jyxNSlXi-NZhCfD8Xp9s-7RzDWrlIdB0I9YqixkQM&__tn__=EH-R"
+    response = requests.get(image_link)
+    image_file = Image.open(BytesIO(response.content))
+
+
+        #image_file = Image.open(instance.image.path)
     
     path, ext = instance.image.name.split(".")
     filename = path.split("/")[-1]
     result_path = f"{filename}_output.{ext}"
-    """
-    img_path = "media/2023/09/20230905_122716.jpeg"
-    image_file = Image.open(img_path) #hack bypass
+
+
 
     output = remove(image_file)  #remove background using rembg
     image_file = None
