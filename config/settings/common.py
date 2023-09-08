@@ -32,8 +32,7 @@ load_dotenv(dotenv_path)
 SECRET_KEY="!g8)ni!f3d_hx#*iaq0%%(bw5rd*43wz(2qq*ale6xzd$kab1!"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = False #False
 
 ALLOWED_HOSTS = ["*",".vercel.app"]
 
