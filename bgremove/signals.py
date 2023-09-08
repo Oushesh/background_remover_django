@@ -11,7 +11,6 @@ from requests.adapters import Retry, HTTPAdapter
 
 from .models import UserActivity
 
-
 session = requests.Session()  # to retry failed requests (3 times)
 retries = Retry(total=3, backoff_factor=1)
 session.mount("http://", HTTPAdapter(max_retries=retries))
@@ -26,11 +25,12 @@ def process_image(sender, instance, *args, **kwargs):
 
     environment = os.getenv("DJANGO_SETTINGS_MODULE")
     print ("environment")
+    """
     if "production" in environment:
         # get image from Dropbox when in production
         # change to get image from local
 
-        #Hard code instance image url from dropbox link.
+        #Hard coded instance image url from dropbox link.
         image_link = "https://www.dropbox.com/scl/fi/kvfpkl5rvpf0qsoo44sga/20230905_122716.jpeg?rlkey=z0g7tdb8gcq2gm53o85ze8fz2&dl=0"
         response = session.get(image_link)
         #response = session.get(instance.image.url)
@@ -43,12 +43,15 @@ def process_image(sender, instance, *args, **kwargs):
     else:
         # get image from disk when in local
         image_file = Image.open(instance.image.path)
-
+    
     path, ext = instance.image.name.split(".")
     filename = path.split("/")[-1]
     result_path = f"{filename}_output.{ext}"
+    """
+    img_path = "media/2023/09/20230905_122716.jpeg"
+    image_file = Image.open(img_path) #hack bypass
 
-    output = remove(image_file)  # remove background using rembg
+    output = remove(image_file)  #remove background using rembg
     image_file = None
 
     output.convert("RGB")
