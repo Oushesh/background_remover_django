@@ -1,7 +1,6 @@
 import dropbox
 import os
 
-
 def upload_to_dropbox(image_path, destination_path, access_token):
     """
     Upload an image to Dropbox.
@@ -21,7 +20,6 @@ def upload_to_dropbox(image_path, destination_path, access_token):
 
 if __name__ == "__main__":
     # Load your access token from an environment variable or hardcoded string
-
     ACCESS_TOKEN = "qckrh0b36gaarzm"
 
     # Local image path and the path where you want to save the image in Dropbox
