@@ -37,9 +37,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # https://django-storages.readthedocs.io/en/latest/index.html
 
 DEFAULT_FILE_STORAGE = "storages.backends.dropbox.DropBoxStorage"
-
 DROPBOX_OAUTH2_TOKEN = os.getenv("DROPBOX_OAUTH2_TOKEN")
-#DROPBOX_OAUTH2_TOKEN = "sl.BlpxLvFMFhJ-NjZ0ejffFyHyJyognaTU9tqSCAqTknTtVXbbGu1IQCRbzq98TW2ejiPW2STGwHqIjD4ibnE8sf-z9dCDyprjfIVQqxeQtraunPOU3w-nA3Bwly04McPQedbnsxp1MVrl03-yQRYn2kk"
 
 DROPBOX_APP_KEY = os.getenv("DROPBOX_APP_KEY")
 DROPBOX_APP_SECRET = os.getenv("DROPBOX_APP_SECRET")
