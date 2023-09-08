@@ -19,4 +19,4 @@ os.environ.setdefault(
 
 application = get_wsgi_application()
 
-app = application #This is needed because of vercel
+#app = application #This is needed because of vercel
