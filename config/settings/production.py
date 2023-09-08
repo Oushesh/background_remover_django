@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 
 from config.settings.common import *
 
-
 # update envrionment variables for production
 dotenv_path = os.path.join(BASE_DIR, ".env.production")
 load_dotenv(dotenv_path)
