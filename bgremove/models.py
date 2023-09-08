@@ -14,7 +14,6 @@ def get_upload_path(instance, filename):
     image_path = f"{folder}/{time_stamp}.{ext}"
     return image_path
 
-
 class UserActivity(models.Model):
     """
     A class representing user activity

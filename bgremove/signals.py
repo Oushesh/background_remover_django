@@ -25,13 +25,19 @@ def process_image(sender, instance, *args, **kwargs):
         return
 
     environment = os.getenv("DJANGO_SETTINGS_MODULE")
-    print ("environment",)
+    print ("environment")
     if "production" in environment:
         # get image from Dropbox when in production
         # change to get image from local
-        response = session.get(instance.image.url)
+
+        #Hard code instance image url from dropbox link.
+        image_link = "https://www.dropbox.com/scl/fi/kvfpkl5rvpf0qsoo44sga/20230905_122716.jpeg?rlkey=z0g7tdb8gcq2gm53o85ze8fz2&dl=0"
+        response = session.get(image_link)
+        #response = session.get(instance.image.url)
+
         if response.status_code != 200:
             return
+        #else open the Image
         image_file = Image.open(BytesIO(response.content))
         response = None
     else:
