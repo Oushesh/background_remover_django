@@ -4,4 +4,5 @@
 
 ## Backend:
    Django Ninja
+   Django Swagger UI
    
