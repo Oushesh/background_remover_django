@@ -2,13 +2,6 @@ import dropbox
 import os
 
 def upload_to_dropbox(image_path, destination_path, access_token):
-    """
-    Upload an image to Dropbox.
-
-    :param image_path: local path to the image you want to upload
-    :param destination_path: path in Dropbox where you want the image to be saved
-    :param access_token: your Dropbox OAuth2 access token
-    """
     with open(image_path, "rb") as image_file:
         dbx = dropbox.Dropbox(access_token)
         try:
@@ -17,13 +10,11 @@ def upload_to_dropbox(image_path, destination_path, access_token):
         except dropbox.exceptions.ApiError as err:
             print(f"API error: {err}")
 
-
 if __name__ == "__main__":
-    # Load your access token from an environment variable or hardcoded string
-    ACCESS_TOKEN = "qckrh0b36gaarzm"
+    #Dropbox app name:
+    ACCESS_TOKEN = "sl.BlqmRHlhTgNa9kl6u2AzuLxKBU5IkybUFB517IywH_ - jhrBwzZ5A3QWQvBKhu_qkIMAyOTj0lrNIXI8DFhEmIlnYfSWFKk1 - mQigD8NLRxXCoErzspbqt_0JRX8gqvaotknRPs - UVWFU"
 
     # Local image path and the path where you want to save the image in Dropbox
     IMAGE_PATH = "media/2023/09/20230905_122716.jpeg"
     DESTINATION_PATH = "https://www.dropbox.com/scl/fo/jf97szegrp01chpg6lsk8/h?rlkey=waoojc609zf7nq4ifji7g4u1e&dl=0"
-
     upload_to_dropbox(IMAGE_PATH, DESTINATION_PATH, ACCESS_TOKEN)
